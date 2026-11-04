@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QuickCart | Online Shopping</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .navbar {
+            background: linear-gradient(90deg, #111827, #312e81);
+        }
+
+        .navbar-brand {
+            font-size: 28px;
+            letter-spacing: 1px;
+        }
+
+        .brand-icon {
+            color: #fbbf24;
+        }
+
+        .nav-link {
+            color: white !important;
+            margin-left: 15px;
+        }
+
+        .nav-link:hover {
+            color: #fbbf24 !important;
+        }
+
+        .hero {
+            min-height: 600px;
+
+            background-image:
+                linear-gradient(rgba(17, 24, 39, 0.75),
+                rgba(88, 90, 147, 0.65)),
+                url("https://www.creativefabrica.com/wp-content/uploads/2023/11/23/Online-Quick-Shopping-Logo-Template-Graphics-84764030-1.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+        }
+
+        .hero-btn {
+            padding: 13px 35px;
+            border-radius: 30px;
+        }
+
+        .section-title {
+            font-weight: bold;
+            color: #111827;
+        }
+
+        .section-line {
+            width: 70px;
+            height: 4px;
+            background-color: #6366f1;
+            margin: auto;
+        }
+
+        .category-card {
+            border: none;
+            border-radius: 18px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .category-card img {
+            height: 210px;
+            object-fit: cover;
+        }
+
+        .category-icon {
+            font-size: 35px;
+        }
+
+        .offer-banner {
+            background:
+                linear-gradient(rgba(79, 70, 229, 0.85),
+                rgba(104, 202, 171, 0.9)),
+                url("https://jooinn.com/images/red-tags-dangling-with-the-word-sale-sales-concept.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            border-radius: 20px;
+            padding: 60px 30px;
+        }
+
+        .product-card {
+            border: none;
+            border-radius: 18px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .product-card img {
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .price {
+            color: #4f46e5;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .old-price {
+            color: gray;
+            text-decoration: line-through;
+            font-size: 14px;
+        }
+
+        .cart-btn {
+            border-radius: 25px;
+        }
+
+        .feature-box {
+            background: white;
+            border-radius: 18px;
+            padding: 30px;
+            height: 100%;
+            transition: 0.3s;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            color: #4f46e5;
+        }
+
+        .newsletter {
+            background-color: #111827;
+            border-radius: 20px;
+        }
+
+        footer {
+            background: #111827;
+        }
+
+        footer a {
+            color: #adb5bd;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        .social-icon {
+            font-size: 23px;
+            margin-right: 15px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+
+    <div class="container">
+
+        <a class="navbar-brand fw-bold" href="#">
+
+            <i class="bi bi-cart4 brand-icon"></i>
+
+            QuickCart
+
+        </a>
+
+        <button class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#categories">
+                        Categories
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#products">
+                        Products
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">
+                        Contact
+                    </a>
+                </li>
+
+                <li class="nav-item ms-lg-3">
+
+                    <button class="btn btn-warning rounded-pill px-4">
+
+                        <i class="bi bi-cart-fill"></i>
+
+                        Cart
+
+                        <span class="badge bg-dark">
+                            0
+                        </span>
+
+                    </button>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<section class="hero" id="home">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-7 text-white">
+
+                <span class="badge bg-warning text-dark px-3 py-2 mb-3">
+
+                    🔥 MEGA SALE IS LIVE 
+
+                </span>
+
+                <h1 class="fw-bold">
+
+                    Shop Smart.
+                    <br>
+                    Shop Fast.
+                    <br>
+
+                    <span class="text-warning">
+                        Shop QuickCart.
+                    </span>
+
+                </h1>
+
+                <p class="lead mt-4">
+
+                    Discover amazing products, exciting offers
+                    and everyday essentials — all in one place.
+
+                </p>
+
+                <div class="mt-4">
+
+                    <a href="#products"
+                        class="btn btn-warning btn-lg hero-btn me-2">
+
+                        <i class="bi bi-bag-fill"></i>
+
+                        Shop Now
+
+                    </a>
+
+                    <a href="#categories"
+                        class="btn btn-outline-light btn-lg hero-btn">
+
+                        Explore Categories
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<div class="container mt-4">
+
+    <div class="alert alert-success text-center rounded-pill">
+
+        <i class="bi bi-truck"></i>
+
+        <strong>Free Delivery!</strong>
+
+        Free shipping on orders above ₹999
+
+        🎉
+
+    </div>
+
+</div>
+
+
+<section id="categories" class="py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="section-title">
+                Explore Categories
+            </h2>
+
+            <div class="section-line mb-3"></div>
+
+            <p class="text-muted">
+                Find everything you need in one place
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-12 col-sm-6 col-lg-3">
+
+                <div class="card category-card shadow-sm">
+
+                    <img
+                        src="https://cdn.shopify.com/s/files/1/0270/1960/8141/collections/ELECTR.jpg?v=1594722447"
+                        alt="Electronics">
+
+                    <div class="card-body text-center">
+
+                        <div class="category-icon text-primary">
+                            <i class="bi bi-laptop"></i>
+                        </div>
+
+                        <h5 class="fw-bold">
+                            Electronics
+                        </h5>
+
+                        <p class="text-muted">
+                            Phones, laptops & gadgets
+                        </p>
+
+                        <a href="#products"
+                            class="btn btn-outline-primary rounded-pill">
+
+                            Shop Category
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="col-12 col-sm-6 col-lg-3">
+
+                <div class="card category-card shadow-sm">
+
+                    <img
+                        src="https://ygo-assets-websites-editorial-emea.yougov.net/original_images/GettyImages-1656866337.jpg"
+                        alt="Fashion">
+
+                    <div class="card-body text-center">
+
+                        <div class="category-icon text-danger">
+                            <i class="bi bi-bag-heart"></i>
+                        </div>
+
+                        <h5 class="fw-bold">
+                            Fashion
+                        </h5>
+
+                        <p class="text-muted">
+                            Latest styles & trends
+                        </p>
+
+                        <a href="#products"
+                            class="btn btn-outline-danger rounded-pill">
+
+                            Shop Category
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="col-12 col-sm-6 col-lg-3">
+
+                <div class="card category-card shadow-sm">
+
+                    <img
+                        src="https://tse1.mm.bing.net/th/id/OIP.LP3U79-ps54ClgTB7wztKwHaEu?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+                        alt="Books">
+
+                    <div class="card-body text-center">
+
+                        <div class="category-icon text-success">
+                            <i class="bi bi-book"></i>
+                        </div>
+
+                        <h5 class="fw-bold">
+                            Books
+                        </h5>
+
+                        <p class="text-muted">
+                            Learn, read & explore
+                        </p>
+
+                        <a href="#products"
+                            class="btn btn-outline-success rounded-pill">
+
+                            Shop Category
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3">
+
+                <div class="card category-card shadow-sm">
+
+                    <img
+                        src="https://tse1.mm.bing.net/th/id/OIP.cRChV6JjhUshlBc_SMeJxQHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+                        alt="Accessories">
+
+                    <div class="card-body text-center">
+
+                        <div class="category-icon text-warning">
+                            <i class="bi bi-watch"></i>
+                        </div>
+
+                        <h5 class="fw-bold">
+                            Accessories
+                        </h5>
+
+                        <p class="text-muted">
+                            Complete your style
+                        </p>
+
+                        <a href="#products"
+                            class="btn btn-outline-warning rounded-pill">
+
+                            Shop Category
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="offer-banner text-white text-center">
+
+            <span class="badge bg-warning text-dark px-3 py-2">
+                LIMITED TIME OFFER
+            </span>
+
+            <h2 class="display-5 fw-bold mt-3">
+
+                Get Up To 50% OFF
+
+            </h2>
+
+            <p class="lead">
+
+                Grab your favourite products before the offer ends!
+
+            </p>
+
+            <a href="#products"
+                class="btn btn-light btn-lg rounded-pill px-5">
+
+                Shop Deals
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="products" class="py-5 bg-light">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="section-title">
+                Trending Products
+            </h2>
+
+            <div class="section-line mb-3"></div>
+
+            <p class="text-muted">
+                Our most popular products
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-12 col-sm-6 col-lg-4">
+
+                <div class="card product-card h-100 shadow-sm">
+
+                    <div class="position-relative">
+
+                        <img
+                            src="https://www.slashgear.com/img/gallery/the-apple-watch-ultra-is-more-smartwatch-than-you-need-first-look/l-intro-1662581726.jpg"
+                            class="card-img-top"
+                            alt="Smart Watch">
+
+                        <span class="badge bg-danger position-absolute top-0 end-0 m-3">
+                            30% OFF
+                        </span>
+
+                    </div>
+
+                    <div class="card-body">
+
+                        <small class="text-muted">
+                            Electronics
+                        </small>
+
+                        <h5 class="fw-bold mt-2">
+                            Smart Watch 
+                        </h5>
+
+                        <p class="text-muted">
+                            Fitness tracking, notifications and
+                            stylish design.
+                        </p>
+
+                        <span class="old-price">
+                            ₹3,499
+                        </span>
+
+                        <span class="price ms-2">
+                            ₹2,499
+                        </span>
+
+                        <button class="btn btn-primary w-100 mt-3 cart-btn">
+
+                            <i class="bi bi-cart-plus"></i>
+
+                            Add to Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-12 col-sm-6 col-lg-4">
+
+                <div class="card product-card h-100 shadow-sm">
+
+                    <div class="position-relative">
+
+                        <img
+                            src="https://cdn.mos.cms.futurecdn.net/RSzvmgfYZ44VjcdhqK5NsW.jpg"
+                            class="card-img-top"
+                            alt="Headphones">
+
+                        <span class="badge bg-success position-absolute top-0 end-0 m-3">
+                            BEST SELLER
+                        </span>
+
+                    </div>
+
+                    <div class="card-body">
+
+                        <small class="text-muted">
+                            Electronics
+                        </small>
+
+                        <h5 class="fw-bold mt-2">
+                            Wireless Headphones
+                        </h5>
+
+                        <p class="text-muted">
+                            Powerful sound with comfortable
+                            wireless listening.
+                        </p>
+
+                        <span class="old-price">
+                            ₹2,499
+                        </span>
+
+                        <span class="price ms-2">
+                            ₹1,999
+                        </span>
+
+                        <button class="btn btn-primary w-100 mt-3 cart-btn">
+
+                            <i class="bi bi-cart-plus"></i>
+
+                            Add to Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-12 col-sm-6 col-lg-4">
+
+                <div class="card product-card h-100 shadow-sm">
+
+                    <div class="position-relative">
+
+                        <img
+                            src="https://tse3.mm.bing.net/th/id/OIP.T6LXWr4tjmXxUmKTYhKQ0AHaFN?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+                            class="card-img-top"
+                            alt="Shoes">
+
+                        <span class="badge bg-warning text-dark position-absolute top-0 end-0 m-3">
+                            TRENDING
+                        </span>
+
+                    </div>
+
+                    <div class="card-body">
+
+                        <small class="text-muted">
+                            Fashion
+                        </small>
+
+                        <h5 class="fw-bold mt-2">
+                            Premium Sports Shoes
+                        </h5>
+
+                        <p class="text-muted">
+                            Lightweight shoes designed for comfort
+                            and everyday use.
+                        </p>
+
+                        <span class="old-price">
+                            ₹3,499
+                        </span>
+
+                        <span class="price ms-2">
+                            ₹2,799
+                        </span>
+
+                        <button class="btn btn-primary w-100 mt-3 cart-btn">
+
+                            <i class="bi bi-cart-plus"></i>
+
+                            Add to Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-12 col-sm-6 col-lg-4">
+
+                <div class="card product-card h-100 shadow-sm">
+
+                    <div class="position-relative">
+
+                        <img
+                            src="https://m.media-amazon.com/images/I/41EepkUf2tL._SY445_SX342_.jpg"
+                            class="card-img-top"
+                            alt="Book">
+
+                        <span class="badge bg-info text-dark position-absolute top-0 end-0 m-3">
+                            NEW
+                        </span>
+
+                    </div>
+
+                    <div class="card-body">
+
+                        <small class="text-muted">
+                            Books
+                        </small>
+
+                        <h5 class="fw-bold mt-2">
+                            Knowledge Book
+                        </h5>
+
+                        <p class="text-muted">
+                            An inspiring book for learning and
+                            personal growth.
+                        </p>
+
+                        <span class="old-price">
+                            ₹799
+                        </span>
+
+                        <span class="price ms-2">
+                            ₹599
+                        </span>
+
+                        <button class="btn btn-primary w-100 mt-3 cart-btn">
+
+                            <i class="bi bi-cart-plus"></i>
+
+                            Add to Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-12 col-sm-6 col-lg-4">
+
+                <div class="card product-card h-100 shadow-sm">
+
+                    <div class="position-relative">
+
+                        <img
+                            src="https://th.bing.com/th/id/R.d33586feabb3eba08579faefd34dd393?rik=Ridjir0xYu0wnA&riu=http%3a%2f%2faccessorizelondon.in%2fcdn%2fshop%2ffiles%2fMA-28187034001_1_59779e48-1af6-450a-a2e6-9cea78d20c85.webp%3fv%3d1697534365&ehk=uB0WE1RNSexp6CjlRR0fqof6%2bUQVZ9%2fggpgQPcXwPCM%3d&risl=&pid=ImgRaw&r=0"
+                            class="card-img-top"
+                            alt="Bag">
+
+                        <span class="badge bg-primary position-absolute top-0 end-0 m-3">
+                            POPULAR
+                        </span>
+
+                    </div>
+
+                    <div class="card-body">
+
+                        <small class="text-muted">
+                            Accessories
+                        </small>
+
+                        <h5 class="fw-bold mt-2">
+                            Premium Leather Bag
+                        </h5>
+
+                        <p class="text-muted">
+                            Elegant and spacious bag for everyday
+                            use.
+                        </p>
+
+                        <span class="old-price">
+                            ₹1,999
+                        </span>
+
+                        <span class="price ms-2">
+                            ₹1,499
+                        </span>
+
+                        <button class="btn btn-primary w-100 mt-3 cart-btn">
+
+                            <i class="bi bi-cart-plus"></i>
+
+                            Add to Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-12 col-sm-6 col-lg-4">
+
+                <div class="card product-card h-100 shadow-sm">
+
+                    <div class="position-relative">
+
+                        <img
+                            src="https://cdn.mos.cms.futurecdn.net/zynpV8NyMVZdTsnK6t48AR.jpg"
+                            class="card-img-top"
+                            alt="Camera">
+
+                        <span class="badge bg-dark position-absolute top-0 end-0 m-3">
+                            FEATURED
+                        </span>
+
+                    </div>
+
+                    <div class="card-body">
+
+                        <small class="text-muted">
+                            Electronics
+                        </small>
+
+                        <h5 class="fw-bold mt-2">
+                            Digital Camera
+                        </h5>
+
+                        <p class="text-muted">
+                            Capture beautiful moments with high
+                            quality images.
+                        </p>
+
+                        <span class="old-price">
+                            ₹11,999
+                        </span>
+
+                        <span class="price ms-2">
+                            ₹8,999
+                        </span>
+
+                        <button class="btn btn-primary w-100 mt-3 cart-btn">
+
+                            <i class="bi bi-cart-plus"></i>
+
+                            Add to Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="section-title">
+                Why Shop With QuickCart?
+            </h2>
+
+            <div class="section-line mb-3"></div>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+
+                <div class="feature-box text-center">
+
+                    <i class="bi bi-truck feature-icon"></i>
+
+                    <h5 class="fw-bold mt-3">
+                        Fast Delivery
+                    </h5>
+
+                    <p class="text-muted">
+                        Get your orders delivered quickly
+                        and safely to your doorstep.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="feature-box text-center">
+
+                    <i class="bi bi-shield-check feature-icon"></i>
+
+                    <h5 class="fw-bold mt-3">
+                        Secure Shopping
+                    </h5>
+
+                    <p class="text-muted">
+                        Your shopping experience is safe,
+                        secure and reliable.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="feature-box text-center">
+
+                    <i class="bi bi-headset feature-icon"></i>
+
+                    <h5 class="fw-bold mt-3">
+                        24/7 Support
+                    </h5>
+
+                    <p class="text-muted">
+                        Our customer support team is always
+                        ready to help you.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="newsletter p-5 text-center text-white">
+
+            <i class="bi bi-envelope-heart display-4 text-warning"></i>
+
+            <h2 class="fw-bold mt-3">
+                Stay Updated!
+            </h2>
+
+            <p>
+                Subscribe to get the latest offers and deals.
+            </p>
+
+            <div class="row justify-content-center">
+
+                <div class="col-md-6">
+
+                    <div class="input-group">
+
+                        <input type="email"
+                            class="form-control"
+                            placeholder="Enter your email">
+
+                        <button class="btn btn-warning">
+                            Subscribe
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="contact" class="py-5 bg-light">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="section-title">
+                Contact Us
+            </h2>
+
+            <div class="section-line mb-3"></div>
+
+            <p class="text-muted">
+                We would love to hear from you
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+
+                <div class="feature-box text-center">
+
+                    <i class="bi bi-geo-alt feature-icon"></i>
+
+                    <h5 class="fw-bold mt-3">
+                        Location
+                    </h5>
+
+                    <p class="text-muted">
+                        Bengaluru, Karnataka, India
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="feature-box text-center">
+
+                    <i class="bi bi-telephone feature-icon"></i>
+
+                    <h5 class="fw-bold mt-3">
+                        Phone
+                    </h5>
+
+                    <p class="text-muted">
+                        +91 98765 43210
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="feature-box text-center">
+
+                    <i class="bi bi-envelope feature-icon"></i>
+
+                    <h5 class="fw-bold mt-3">
+                        Email
+                    </h5>
+
+                    <p class="text-muted">
+                        support@quickcart.com
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer class="text-white pt-5 pb-3">
+
+    <div class="container">
+
+        <div class="row">
+
+            <!-- About -->
+
+            <div class="col-md-4 mb-4">
+
+                <h3 class="fw-bold">
+
+                    <i class="bi bi-cart4 text-warning"></i>
+
+                    QuickCart
+
+                </h3>
+
+                <p class="text-secondary">
+
+                    Your one-stop destination for electronics,
+                    fashion, books, accessories and more.
+
+                </p>
+
+                <div class="mt-3">
+
+                    <i class="bi bi-facebook social-icon"></i>
+
+                    <i class="bi bi-instagram social-icon"></i>
+
+                    <i class="bi bi-twitter-x social-icon"></i>
+
+                    <i class="bi bi-youtube social-icon"></i>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4 mb-4">
+
+                <h5 class="fw-bold">
+                    Quick Links
+                </h5>
+
+                <ul class="list-unstyled">
+
+                    <li class="mb-2">
+                        <a href="#home">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="#categories">
+                            Categories
+                        </a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="#products">
+                            Products
+                        </a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="#contact">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div class="col-md-4 mb-4">
+
+                <h5 class="fw-bold">
+                    Get In Touch
+                </h5>
+
+                <p class="text-secondary">
+                    <i class="bi bi-envelope"></i>
+                    support@quickcart.com
+                </p>
+
+                <p class="text-secondary">
+                    <i class="bi bi-telephone"></i>
+                    +91 98765 43210
+                </p>
+
+                <p class="text-secondary">
+                    <i class="bi bi-geo-alt"></i>
+                    Bengaluru, India
+                </p>
+
+            </div>
+
+        </div>
+
+        <hr class="border-secondary">
+
+        <div class="text-center text-secondary">
+
+            <p class="mb-0">
+
+                © 2026 QuickCart.
+                All Rights Reserved.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
